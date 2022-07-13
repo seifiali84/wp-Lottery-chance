@@ -20,8 +20,11 @@ if (!function_exists('add_action')) {
 }
 require 'includes/db_Scores.php';
 require 'pages/Create_Pages.php';
+function add_Lottery_Chance_Menu(){
+    add_menu_page( "Lottery Chance", "Lottery Chance", "manage_options", "Lottery-Chance", "Create_Menu_Page", "dashicons-tickets" );
+}
 
-
+add_action( "admin_menu", "add_Lottery_Chance_Menu");
 
 function Active()
 {
